@@ -1,0 +1,39 @@
+---
+export interface Props {
+  name: string;
+  pronouns: string;
+  role: string;
+  company: string;
+  image: string;
+}
+
+const { name, pronouns, role, company, image } = Astro.props;
+---
+
+<div class="speaker">
+  <img src={image} alt={name} />
+  <h3>{name}</h3>
+  <p>{pronouns}</p>
+  <p>{role} AT {company}</p>
+</div>
+
+<style>
+  .speaker {
+    background-color: var(--light-green);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  h3 {
+    margin: 10px 0 5px;
+  }
+  p {
+    margin: 5px 0;
+  }
+</style>

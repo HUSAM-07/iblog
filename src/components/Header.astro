@@ -1,0 +1,52 @@
+---
+---
+<header>
+  <nav>
+    <ul>
+      <li><a href="#" class="active">[B] BLOG</a></li>
+      <li><a href="#">[D] DOCS</a></li>
+      <li><a href="#">[Y] YOUTUBE</a></li>
+      <li><a href="#">[S] SETTINGS</a></li>
+    </ul>
+  </nav>
+  <div class="console">
+    [C] CONSOLE
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+  }
+  nav a {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .active {
+    background-color: #333;
+    color: white;
+    padding: 0.2rem 0.5rem;
+  }
+  .console {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>

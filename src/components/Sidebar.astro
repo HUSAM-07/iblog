@@ -1,0 +1,57 @@
+---
+const topics = [
+  { name: 'Sandboxes', count: 2 },
+  { name: 'Stripe Apps', count: 1 },
+  { name: 'Workbench', count: 5 },
+  { name: 'Error Handling', count: 3 },
+  { name: 'Dev Digest', count: 2 },
+  { name: 'Invoicing', count: 2 },
+  { name: 'Payment Intents', count: 1 },
+  { name: 'Payment Methods', count: 1 },
+  { name: 'AWS', count: 2 },
+];
+---
+
+<aside>
+  <h3>/ FILTERS</h3>
+  <div class="topic-list">
+    <h4>Topic</h4>
+    {topics.map(topic => (
+      <label>
+        <input type="checkbox" />
+        {topic.name} ({topic.count})
+      </label>
+    ))}
+  </div>
+</aside>
+
+<style>
+  aside {
+    padding: 1rem;
+    border-right: 1px solid var(--border-color);
+  }
+  h3 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .topic-list {
+    font-size: 0.9rem;
+  }
+  h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  @media (max-width: 768px) {
+    aside {
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
+</style>
